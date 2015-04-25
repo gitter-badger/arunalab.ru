@@ -2,7 +2,15 @@ session_name: arunalabru
 windows:
   - window_name: bash
     panes:
-      - source venv/bin/activate
+      - shell_command:
+        - source venv/bin/activate
   - window_name: vim
     panes:
-      - vim
+      - shell_command:
+        - source venv/bin/activate
+        - vim
+  - window_name: misc
+    panes:
+      - shell_command:
+        - source venv/bin/activate
+        - ./manage.py runserver
